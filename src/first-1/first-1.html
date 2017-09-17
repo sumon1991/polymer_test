@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="first-1">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class First1 extends Polymer.Element {
+      static get is() { return 'first-1'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'first-1'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(First1.is, First1);
+  </script>
+</dom-module>
